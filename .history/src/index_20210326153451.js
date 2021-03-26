@@ -6,11 +6,14 @@ import { GithubProvider } from "./context/context";
 import { Auth0Provider } from "@auth0/auth0-react";
 require("dotenv").config();
 
+const domain = process.env.REACT_APP_DOMAIN;
+const clientId = process.env.REACT_APP_CLIENT_ID;
+
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-      domain={process.env.REACT_APP_DOMAIN}
-      clientId={process.env.REACT_APP_CLIENT_ID}
+      domain="dev-sham007.u.com"
+      clientId="xZxNUGVHSJl58cvKWzxMNUlSVrRqtTm9"
       redirectUri={window.location.origin}
       cacheLocation="localstorage"
     >
